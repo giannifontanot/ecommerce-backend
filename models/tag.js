@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Tag.init({
-    id: DataTypes.INTEGER,
-    tag_name: DataTypes.STRING
+    id: {type:DataTypes.INTEGER,allowNull:false,primaryKey:true,autoIncrement:true},
+    tag_name: {type:DataTypes.STRING}
   }, {
     sequelize,
     modelName: 'Tag',
