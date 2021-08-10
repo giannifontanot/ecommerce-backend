@@ -9,7 +9,9 @@ module.exports = (sequelize, DataTypes) => {
          */
         static associate({Product}) {
             // define association here
-            this.belongsTo(Product, {foreignKey:'category_id'});
+            this.hasMany(Product, {
+                foreignKey: 'category_id'
+            });
         }
     };
     Category.init({
@@ -17,8 +19,10 @@ module.exports = (sequelize, DataTypes) => {
         category_name: {type: DataTypes.STRING, allowNull: false}
     }, {
         sequelize,
-        modelName: 'Catego',
-        tableName: 'CATEGORIES',
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: "Category",
     });
     return Category;
 };
