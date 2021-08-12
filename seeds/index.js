@@ -24,5 +24,4 @@ const seedAll = async () => {
     process.exit(0);
 }
 
-//RUN FOREST, RUN!!
-seedAll();
+module.exports = seedAll;

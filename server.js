@@ -2,6 +2,7 @@ const express = require('express');
 const routes = require('./routes/index');
 const test = require('./routes/test');
 const {sequelize} = require('./models/index');
+const seedAll = require('./seeds/index');
 
 
 const app = express();
@@ -14,18 +15,9 @@ app.use(routes);
 
 // main function
 run = async () => {
-
-    await sequelize.authenticate();
+    await seedAll();
     app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
 }
 
 // RUN FOREST, RUN!!!
 run();
-
-
-/*
-
-// Prints: /Users/mjr
-// Prints: /Users/mjr
-
-*/
