@@ -7,21 +7,30 @@ const seedsTag = require('./tag-seeds.json');
 const seedsProductTag = require('./product-tag-seeds.json');
 
 
-const seedAll = async () => {
-    await sequelize.sync({force: true});
-    const numCategorySeedsPlanted = await Category.bulkCreate(seedsCategory);
-    console.log("---> numCategorySeedsPlanted :" +  JSON.stringify(numCategorySeedsPlanted));
+const sow = async () => {
+    try {
+        await sequelize.sync({force: true});
+        console.log("---> sequelize.sync");
+        const numCategorySeedsPlanted = await Category.bulkCreate(seedsCategory);
+        console.log("---> numCategorySeedsPlanted");
 
-    const numProductSeedsPlanted = await Product.bulkCreate(seedsProduct);
-    console.log("---> numProductSeedsPlanted :" + JSON.stringify(numProductSeedsPlanted));
+        const numProductSeedsPlanted = await Product.bulkCreate(seedsProduct);
+        console.log("---> numProductSeedsPlanted");
 
-    const numberTagSeedsPlanted = await Tag.bulkCreate(seedsTag);
-    console.log("---> numberTagSeedsPlanted :" + JSON.stringify(numberTagSeedsPlanted));
+        const numberTagSeedsPlanted = await Tag.bulkCreate(seedsTag);
+        console.log("---> numberTagSeedsPlanted");
 
-    const numberProductTagSeedsPlanted = await ProductTag.bulkCreate(seedsProductTag);
-    console.log("---> numberProductTagSeedsPlanted :" + JSON.stringify(numberProductTagSeedsPlanted));
+        const numberProductTagSeedsPlanted = await ProductTag.bulkCreate(seedsProductTag);
+        console.log("---> numberProductTagSeedsPlanted");
 
-    process.exit(0);
+        console.log("---> Field planted.");
+
+        process.exit(0);
+    } catch (e) {
+        console.log("---> exception: " + e.message + ". " + __filename);
+    }
+
 }
 
-seedAll();
+
+sow();

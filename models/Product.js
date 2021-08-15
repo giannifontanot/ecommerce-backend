@@ -1,23 +1,7 @@
 'use strict';
 const {Model,DataTypes} = require('sequelize');
 const sequelize = require('../config/connection.js');
-    class Product extends Model {
-        /**
-         * Helper method for defining associations.
-         * This method is not a part of Sequelize lifecycle.
-         * The `models/index` file will call this method automatically.
-         */
-        static associate({Category, Tag}) {
-            // define association here
-            this.belongsTo(Category, {foreignKey: 'category_id'});
-            this.belongsToMany(Tag, {
-                through: {
-                    model: "ProductTag",
-                    unique: false,
-                },
-            });
-        }
-    }
+    class Product extends Model {}
 
     Product.init({
         product_id: {type: DataTypes.INTEGER, allowNull: false, primaryKey: true, autoIncrement: true},
@@ -33,3 +17,4 @@ const sequelize = require('../config/connection.js');
         modelName: "Product",
     });
 module.exports =  Product;
+
