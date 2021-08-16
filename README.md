@@ -34,7 +34,8 @@ The requirements to install this project are:
 `````````
 ## Database Diagram
 This is the diagram showing the Database tables and the relationships between them.
-![e-commerce.gif](e_commerce_db.png)
+
+![e_commerce_db.png](e_commerce_db.png)
 
 ## Usage
 Using POSTMAN or INSOMNIA, you can verify the API routes for GET, POST, PUT, and DELETE.
