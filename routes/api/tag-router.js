@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:tag_id', async (req, res) => {
     try {
-        const result = await Tag.findOne(req.params.tag_id);
+        const result = await Tag.findByPk(req.params.tag_id);
         res.status(200).json(result);
     } catch (e) {
         res.status(400).json({message: e.message});
