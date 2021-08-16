@@ -9,14 +9,13 @@ description in the store. The database we use as developers to store the data is
 - E-Commerce Backend
 	* [VIDEO](#VIDEO)
 	* [Installation](#installation)
-	* [Database Diagram](#Database Diagram)	  
+	* [Database-Diagram](#Database-Diagram)	  
 	* [Usage](#usage)
 	* [Credits](#credits)
 	* [Features](#features)
 	* [Contributions](#contributions)
 - [🔗 Links](#---links)
 	+ [GitHub Repository](#github-repository)
-	+ [Live Link](#live-link)
 	+ [Support](#support)
 	+ [Authors](#authors)
 
@@ -32,7 +31,7 @@ The requirements to install this project are:
 - MySql2 
 - MySQL Database
 `````````
-## Database Diagram
+## Database-Diagram
 This is the diagram showing the Database tables and the relationships between them.
 
 ![e_commerce_db.png](e_commerce_db.png)
@@ -66,8 +65,6 @@ In case you need them, here are some guidelines: [Contributor Covenant](https://
 # 🔗 Links
 ### GitHub Repository
 [https://github.com/giannifontanot/ecommerce-backend/](https://github.com/giannifontanot/ecommerce-backend/)
-### Live Link
-[https://giannifontanot.github.io/no-live-link](https://giannifontanot.github.io/no-live-link)
 ### Support
 If you need help with this project, please write to: [giannifontanot@gmail.com](https://mailto:giannifontanot@gmail.com)
 ### Authors
