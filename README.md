@@ -20,7 +20,11 @@ description in the store. The database we use as developers to store the data is
 	+ [Authors](#authors)
 
 ## VIDEO
-You will find a video demonstrating the use of this app [HERE](https://vimeo.com/587640028).
+You will find a video demonstrating the use of this app:
+
+  [![Foo](play-instructional-video.jpg)](https://vimeo.com/587640028)
+
+
 ## Installation
 The requirements to install this project are: 
 `````````
