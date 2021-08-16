@@ -22,7 +22,7 @@ description in the store. The database we use as developers to store the data is
 ## VIDEO
 You will find a video demonstrating the use of this app:
 
-  [![Foo](play-instructional-video.jpg)](https://vimeo.com/587640028)
+  [![Foo](play-instructional-video-FINAL.png)](https://vimeo.com/587640028)
 
 
 ## Installation
