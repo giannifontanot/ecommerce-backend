@@ -1,5 +1,6 @@
 const express = require('express');
 const routes = require('./routes/index');
+const sequelize = require('./config/connection');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -14,6 +15,7 @@ app.use(routes);
 
 run = async () => {
     try {
+        await sequelize.sync({force: true});
         await app.listen(PORT, () => console.log(` -> App listening on port ${PORT}!`));
     } catch (e) {
         console.log("---> exception: " + e.message + ". " + __filename);

@@ -13,10 +13,10 @@ router.get('/', async (req, res) => {
     }
 
 });
-router.get('/:category_name', async (req, res) => {
+router.get('/:category_id', async (req, res) => {
 
     try {
-        const categories = await Category.findOne({where: {category_name: req.params.category_name}});
+        const categories = await Category.findByPk(req.params.category_id);
         res.status(200).json(categories);
     } catch (e) {
         console.log("---> exception: " + e.message + ". " + __filename);

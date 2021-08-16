@@ -12,9 +12,9 @@ router.get('/', async (req, res) => {
 
 });
 
-router.get('/:product_name', async (req, res) => {
+router.get('/:product_id', async (req, res) => {
     try {
-        const result = await Product.findOne({where: {product_name: req.params.product_name}});
+        const result = await Product.findByPk(req.params.product_id);
         res.status(200).json(result);
     } catch (e) {
         console.log("---> exception: " + e.message + ". " + __filename);

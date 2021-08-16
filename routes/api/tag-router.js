@@ -11,10 +11,9 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/:tag_name', async (req, res) => {
+router.get('/:tag_id', async (req, res) => {
     try {
-        const result = await Tag.findOne({where: {tag_name: req.params.tag_name}});
-        console.log("---> req.params.tag_name :" + req.params.tag_name);
+        const result = await Tag.findOne(req.params.tag_id);
         res.status(200).json(result);
     } catch (e) {
         res.status(400).json({message: e.message});

@@ -9,7 +9,6 @@ const seedsProductTag = require('./product-tag-seeds.json');
 
 const sow = async () => {
     try {
-        await sequelize.sync({force: true});
         console.log("---> sequelize.sync");
         const numCategorySeedsPlanted = await Category.bulkCreate(seedsCategory);
         console.log("---> numCategorySeedsPlanted");
@@ -32,5 +31,5 @@ const sow = async () => {
 
 }
 
-
+// Insert new registers in e-commerce_db
 sow();
