@@ -7,7 +7,6 @@ grouped into CATEGORIES and each one of those products can receive as many TAGS 
 description in the store. The database we use as developers to store the data is made out of 4 tables (Categories, Products, Tags, and the bridge table Product-Tags) and are related using foreign keys. This project was very interesting to develop, because it uses a library called Sequelize, which abstracts the SQL into regular Javascript code in order to help the developer to be more efficient.  
 ## Table of Contents
 - E-Commerce Backend
-	* [VIDEO](#VIDEO)
 	* [Installation](#installation)
 	* [Database-Diagram](#Database-Diagram)	  
 	* [Usage](#usage)
@@ -18,12 +17,6 @@ description in the store. The database we use as developers to store the data is
 	+ [GitHub Repository](#github-repository)
 	+ [Support](#support)
 	+ [Authors](#authors)
-
-## VIDEO
-You will find a video demonstrating the use of this app:
-
-  [![Foo](play-instructional-video-FINAL.png)](https://vimeo.com/587640028)
-
 
 ## Installation
 The requirements to install this project are: 
